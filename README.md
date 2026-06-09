@@ -38,7 +38,7 @@ docker compose down --remove-orphans
 
 | Projeto        | Descrição |
 |----------------|-----------|
-| Endpoint       | http://localhost:5107/?message=Teste Kafka |
+| Endpoint       | http://localhost:5107/?message=TesteKafka |
 | Kafka Cluster  | http://localhost:19000 |
 
 
