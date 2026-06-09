@@ -1,4 +1,4 @@
-## exemploAPIKafka
+## EventDriven-Kafka
 Exemplo de criação de Event-Driven Architecture (EDA) utilizando Apache Kafka em C# ASP.NET Core 10   
 
 
