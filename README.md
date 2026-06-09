@@ -46,7 +46,7 @@ docker compose down --remove-orphans
 
 Worker Service que sobe um **BackgroundService (Worker)** . No **ExecuteAsync**:
 
-- Subscreve no tópico `Exemplo1`
+- Subscreve no tópico `Exemplo-1`
 - Consome mensagens em loop com `_consumer.Consume(stoppingToken)`
 - Loga o conteúdo de cada mensagem recebida
 - Aguarda 30 segundos entre cada iteração
