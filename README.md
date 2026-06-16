@@ -6,7 +6,7 @@ Exemplo de Event-Driven Architecture API com Apache Kafka em C# ASP.NET Core 10.
 | Tecnologia | Descrição     |
 |----------------|-----------|
 | **API Minimal**| Abordagem simplificada e leve para construir APIs HTTP com o mínimo de arquivos, dependências e código |
-| **Event-Driven Architecture**| É um design de software onde os componentes reagem a eventos (mudanças de estado). Ele utiliza mensageria para funcionar de forma desacoplada. |
+| **Event-Driven Architecture**|Design de software onde os componentes reagem a eventos (mudanças de estado), utilizando mensageria para funcionar de forma desacoplada. |
 | **Kafka**      | O broker de mensagens em si. Recebe mensagens do Producer e entrega pro Consumer. |
 | **Kafdrop**    | UI web pra visualizar tópicos e mensagens. |
 
