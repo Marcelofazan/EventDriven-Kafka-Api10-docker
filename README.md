@@ -13,11 +13,6 @@ Exemplo de comunicação API Event-Driven Architecture por mensageria com Apache
 
 #### 🔄 Executar a aplicação
 
-| Projeto        | Descrição |
-|----------------|-----------|
-| **ConsumerWorkService**| Consome mensagens do tópico Kafka em background. |
-| **exemploKafkaAPI**  | Expõe endpoint `GET /` que envia mensagem ao Kafka. |
-
 VSCode Terminal [1]
 ```bash
 docker-compose up --build 
@@ -35,16 +30,20 @@ dotnet run
 docker compose down --remove-orphans
 ```
 
-- Internamente usa `ProducerServices`, que cria um `IProducer<Null, string>` via `ProducerBuilder` e chama `ProduceAsync` no tópico configurado.
 
 | Host           | URL       |
 |----------------|-----------|
 | **Kafka Cluster**| http://localhost:19000 |
 | **GET**    |http://localhost:5107/?message=Teste%20Kafka |
 
+#### Separação de responsabilidades.
 
-#### ⚙️ Consumer — ConsumerWorkService
+| Projeto        | Descrição |
+|----------------|-----------|
+| **ConsumerWorkService**| Consome mensagens do tópico Kafka em background. |
+| **exemploKafkaAPI**  | Expõe endpoint `GET /` que envia mensagem ao Kafka. |
 
+#### Fluxo de dados
 Worker Service que sobe um **BackgroundService (Worker)** . No **ExecuteAsync**:
 
 - Subscreve no tópico `Exemplo-1`
@@ -52,4 +51,5 @@ Worker Service que sobe um **BackgroundService (Worker)** . No **ExecuteAsync**:
 - Loga o conteúdo de cada mensagem recebida
 - Aguarda 30 segundos entre cada iteração
 
+- Internamente usa `ProducerServices`, que cria um `IProducer<Null, string>` via `ProducerBuilder` e chama `ProduceAsync` no tópico configurado.
 
