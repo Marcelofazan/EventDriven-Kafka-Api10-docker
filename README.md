@@ -13,13 +13,22 @@ Exemplo de comunicação API Event-Driven Architecture por mensageria com Apache
 #### 💬 Requisitos do Projeto
 - Necessário **Docker** instalado.
 
-#### 🔄 Executar a aplicação
+#### 🔄 Executar a aplicação Docker
 
 VSCode Terminal [1]
 Criar Container 
 ```bash
 docker-compose up --build 
 ```
+VSCode Terminal [3]
+Remover Container 
+```bash
+docker compose down --remove-orphans
+ou
+docker compose down 
+```
+
+#### 🔄 Executar a aplicação local
 
 VSCode Terminal [2]
 ```bash
@@ -27,19 +36,13 @@ dotnet build
 cd exemploApiKafka
 dotnet run 
 ```
-
-Remover Container 
-```bash
-docker compose down --remove-orphans
-```
-
+#### 🧪 Executar Endpoints 
 | Host           | URL       |
 |----------------|-----------|
 | **Kafka Cluster**| http://localhost:19000 |
 | **GET**    |http://localhost:5107/?message=Teste%20Kafka |
 
-#### Separação de responsabilidades.
-
+#### Separação de responsabilidades
 | Projeto        | Descrição |
 |----------------|-----------|
 | **ConsumerWorkService**| Consome mensagens do tópico Kafka em background. |
