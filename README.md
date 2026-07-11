@@ -16,12 +16,12 @@ Exemplo de comunicação API Event-Driven Architecture por mensageria com Apache
 #### 🔄 Executar a aplicação Docker
 
 VSCode Terminal [1]
-Criar Container 
+- Criar Container 
 ```bash
 docker-compose up --build 
 ```
-VSCode Terminal [3]
-Remover Container 
+VSCode Terminal [2]
+- Remover Container 
 ```bash
 docker compose down 
 ```
@@ -29,13 +29,13 @@ docker compose down
 #### 🔍 Executar Testes Unitários
 - Docker Kafka ➡️ Restore ➡️ Build ➡️ Test ➡️ Publish
 
-VSCode Terminal [4]
+VSCode Terminal [3]
 Executar testes Container 
 ```bash
 docker compose --profile test up --build --abort-on-container-exit unit-tests
 ```
 
-VSCode Terminal [5]
+VSCode Terminal [4]
 Remover Container 
 ```bash
 docker compose --profile test down --volumes --remove-orphans
@@ -43,11 +43,11 @@ docker compose --profile test down --volumes --remove-orphans
 
 #### 🔄 Executar a aplicação Desenvolvimento local
 
-VSCode Terminal [2]
+VSCode Terminal [1]
 ```bash
 dotnet build 
 cd exemploApiKafka
-dotnet run 
+dotnet run
 ```
 #### 🧪 Executar Endpoints 
 | Host           | URL       |
