@@ -21,7 +21,7 @@ VSCode Terminal [1]
 docker-compose up --build 
 ```
 VSCode Terminal [2]
-- Remover Container 
+- Fechar Container 
 ```bash
 docker compose down 
 ```
@@ -29,21 +29,21 @@ docker compose down
 #### 🔍 Executar Testes Unitários
 - Docker Kafka ➡️ Restore ➡️ Build ➡️ Test ➡️ Publish
 
-VSCode Terminal [3]
-Executar testes Container 
+VSCode Terminal [1]
+- Executar testes Container 
 ```bash
 docker compose --profile test up --build --abort-on-container-exit unit-tests
 ```
 
-VSCode Terminal [4]
-Remover Container 
+VSCode Terminal [2]
+- Fechar Container 
 ```bash
 docker compose --profile test down --volumes --remove-orphans
 ```
 
 #### 🔄 Executar a aplicação Desenvolvimento local
 
-VSCode Terminal [1]
+VSCode Terminal [1.1]
 ```bash
 dotnet build 
 cd exemploApiKafka
