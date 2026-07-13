@@ -11,7 +11,7 @@ Exemplo de comunicação API Event-Driven Architecture por mensageria com Apache
 | **Kafdrop**    | UI web pra visualizar tópicos e mensagens. |
 
 #### 💬 Requisitos do Projeto
-- Necessário **Docker** instalado.
+- Necessário Docker instalado.
 
 #### 🔄 Executar a aplicação Docker
 
