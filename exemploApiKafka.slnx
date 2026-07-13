@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="docker-compose.dcproj" Type="8BB2217D-0F2D-4B1D-A97E-EF77C4303E92" />
   <Project Path="ConsumerWorkService/ConsumerWorkService.csproj" />
   <Project Path="exemploApiKafka/exemploApiKafka.csproj" />
 </Solution>
